@@ -4,10 +4,11 @@ import 'antd/dist/antd.css';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Login } from './pages/login';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
