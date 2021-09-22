@@ -1,3 +1,13 @@
-.test {
-    width: 50%;
+$green : #1aebb6;
+
+.btn {
+    background: $green;
+    color: black;
+    margin-top: 15%;
 }
+
+.form__input {
+    height: 50px;
+    margin-top: 10px;
+}
+

@@ -1,5 +1,4 @@
 import { Button, Input } from 'antd'
-import Checkbox from 'antd/lib/checkbox/Checkbox'
 import Form from 'antd/lib/form/Form'
 import FormItem from 'antd/lib/form/FormItem'
 import React from 'react'
@@ -21,27 +20,40 @@ export const LoginForm = () => {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
-            className="test"
+            className="container"
         >
+            <label>Email</label>
             <FormItem
-                label="Username"
                 name="username"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
-                <Input />
+                <Input 
+                    placeholder="Email"
+                    className="form__input"
+                    size="large"
+                />
             </FormItem>
 
+            <label>Password</label>
             <FormItem
-                label="Password"
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
-                <Input.Password />
+                <Input.Password
+                    placeholder="Password"
+                    size="large"
+                    className="form__input"
+                />
             </FormItem>
 
-            <FormItem wrapperCol={{ offset: 8, span: 16 }}>
-                <Button type="primary" htmlType="submit">
-                    Submit
+            <FormItem wrapperCol={{ offset: 4, span: 16 }}>
+                <Button 
+                    type="primary"
+                    htmlType="submit"
+                    size={"large"}
+                    block className="btn"
+                >
+                    Login
                 </Button>
             </FormItem>
         </Form>
