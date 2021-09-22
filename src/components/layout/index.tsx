@@ -60,7 +60,3 @@ const LayoutComponent = (props: any) => {
 }
 
 export default LayoutComponent;
-{/* 
-<Sidebar></Sidebar>
-
-<Footer></Footer> */}
