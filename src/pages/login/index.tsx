@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 import React from 'react';
-import './login.scss';
-import { LoginForm } from './../components/auth/loginForm';
+import './index.scss';
+import { LoginForm } from '../../components/auth/loginForm';
 
 export const Login = () => {
 
