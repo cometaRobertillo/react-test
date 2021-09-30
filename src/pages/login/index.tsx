@@ -1,6 +1,5 @@
 import { Col, Row } from 'antd';
 import React from 'react';
-import './index.scss';
 import { LoginForm } from '../../components/auth/loginForm';
 
 export const Login = () => {
@@ -10,29 +9,32 @@ export const Login = () => {
             <div >
                 <Row className="main__content">
                     <Col span={14} offset={5} className="border-shadow">
-                        <Row justify="space-between">
+                        <Row >
                             <Col span={6} className="info__container">
                                 <div className="info__layout">
-                                    <Row justify="center" className="item">
-                                        <img
-                                            src="./assets/paper-plane.png"
-                                            width="80"
-                                            height="80"
-                                            alt="paper plane"
-                                        />
-                                    </Row>
-                                    <Row justify="center" className="item">App Name</Row>
+                                    <div className="info__layout--center">
+                                        <Row justify="center" className="item">
+                                            <img
+                                                src="./assets/paper-plane.png"
+                                                width="80"
+                                                height="80"
+                                                alt="paper plane"
+                                            />
+                                        </Row>
+                                        <Row justify="center" className="item">App Name</Row>
 
-                                    <Row justify="center" className="item">
-                                        <p className="info--title">
-                                            welcome to images sending app
-                                        </p>
-                                    </Row>
+                                        <Row className="item">
+                                            <p className="info--title">
+                                                welcome to images sending app
+                                            </p>
+                                        </Row>
+                                    </div>
+
                                 </div>
 
                             </Col>
 
-                            <Col span={18}  className="test">
+                            <Col span={18} className="form__container">
                                 <Row justify="center" className="form__title">
                                     <Col>
                                         <h2 >
@@ -42,7 +44,7 @@ export const Login = () => {
                                 </Row>
 
                                 <Row>
-                                    
+
                                     <Col span={17} offset={3} className="form__container">
                                         <LoginForm />
                                     </Col>

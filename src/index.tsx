@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import './index.scss';
 import App from './App';
+import './styles/style.scss';
 import reportWebVitals from './reportWebVitals';
 import { Login } from './pages/login';
 

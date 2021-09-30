@@ -2,7 +2,6 @@ import { Button, Input } from 'antd'
 import Form from 'antd/lib/form/Form'
 import FormItem from 'antd/lib/form/FormItem'
 import React from 'react'
-import './loginForm.scss'
 
 export const LoginForm = () => {
 
@@ -13,6 +12,7 @@ export const LoginForm = () => {
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
+
     return (
         <Form
             name="basic"
@@ -20,7 +20,6 @@ export const LoginForm = () => {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
-            className="container"
         >
             <label>Email</label>
             <FormItem
@@ -51,7 +50,8 @@ export const LoginForm = () => {
                     type="primary"
                     htmlType="submit"
                     size={"large"}
-                    block className="btn"
+                    block
+                    className="btn"
                 >
                     Login
                 </Button>
