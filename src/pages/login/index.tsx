@@ -6,9 +6,10 @@ export const Login = () => {
 
     return (
         <>
-            <div >
-                <Row className="main__content">
-                    <Col span={14} offset={5} className="border-shadow">
+            <div>
+                <Row justify="center" className="main__content">
+                    <Col span={14} className="border-shadow">
+
                         <Row >
                             <Col span={6} className="info__container">
                                 <div className="info__layout">
@@ -24,7 +25,7 @@ export const Login = () => {
                                         <Row justify="center" className="item">App Name</Row>
 
                                         <Row className="item">
-                                            <p className="info--title">
+                                            <p className="info--title go">
                                                 welcome to images sending app
                                             </p>
                                         </Row>
@@ -34,7 +35,7 @@ export const Login = () => {
 
                             </Col>
 
-                            <Col span={18} className="form__container">
+                            <Col span={18}>
                                 <Row justify="center" className="form__title">
                                     <Col>
                                         <h2 >
@@ -45,12 +46,14 @@ export const Login = () => {
 
                                 <Row>
 
-                                    <Col span={17} offset={3} className="form__container">
+                                    <Col span={17} offset={3}>
                                         <LoginForm />
                                     </Col>
                                 </Row>
                             </Col>
                         </Row>
+
+
                     </Col>
                 </Row>
 
