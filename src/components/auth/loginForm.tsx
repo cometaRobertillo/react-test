@@ -2,11 +2,20 @@ import { Button, Input } from 'antd'
 import Form from 'antd/lib/form/Form'
 import FormItem from 'antd/lib/form/FormItem'
 import React from 'react'
+import { loginRequest } from '../../helpers/httpRequest'
+import { User } from '../../models/user'
 
 export const LoginForm = () => {
 
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
+    const onFinish = (values : any) => {
+        console.table(values);
+        
+        loginRequest(
+            {
+                ...values,
+                password: parseInt(values.password)
+            }
+        );
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -23,8 +32,8 @@ export const LoginForm = () => {
         >
             <label>Email</label>
             <FormItem
-                name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                name="email"
+                rules={[{ required: true, message: 'Please input your email!' }]}
             >
                 <Input 
                     placeholder="Email"
@@ -42,6 +51,7 @@ export const LoginForm = () => {
                     placeholder="Password"
                     size="large"
                     className="form__input"
+                    type="number"
                 />
             </FormItem>
 
