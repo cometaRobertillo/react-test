@@ -60,9 +60,9 @@ export const sampleResquest = async (protocol: Method, endpoint: string, formVal
 
     } catch (error) {
         if (axios.isAxiosError(error)) {
-            console.log(error);
+            console.log('is axios error');
         } else {
-            console.log(error);
+            console.log('no axios error');
         }
     }
 }

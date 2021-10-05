@@ -2,7 +2,7 @@ import { Button, Input } from 'antd'
 import Form from 'antd/lib/form/Form'
 import FormItem from 'antd/lib/form/FormItem'
 import React from 'react'
-import { customRequest, customRequestPromise, sampleResquest } from '../../helpers/httpRequest'
+import { sampleResquest } from '../../helpers/httpRequest'
 import { User } from '../../models/user'
 
 export const LoginForm = () => {
@@ -10,16 +10,9 @@ export const LoginForm = () => {
     const onFinish = async (values: User) => {
         console.table(values);
 
-        const result = await customRequestPromise('post', '/login', {
-            ...values
-        });
-        console.log('result',result);
-
-
         const sample = await sampleResquest('post','/login', {...values});
         console.log('sample',sample);
         
-
     };
 
     const onFinishFailed = (errorInfo: any) => {

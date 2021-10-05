@@ -9,7 +9,7 @@ import { Login2 } from './pages/login2';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <Login2 />
   </React.StrictMode>,
   document.getElementById('root')
 );
