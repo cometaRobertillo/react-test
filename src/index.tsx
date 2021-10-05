@@ -5,10 +5,11 @@ import App from './App';
 import './styles/style.scss';
 import reportWebVitals from './reportWebVitals';
 import { Login } from './pages/login';
+import { Login2 } from './pages/login2';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <Login2 />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -52,8 +52,6 @@ export const Login = () => {
                                 </Row>
                             </Col>
                         </Row>
-
-
                     </Col>
                 </Row>
 

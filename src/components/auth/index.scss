@@ -6,6 +6,9 @@
 .btn {
     background: $green;
     color: black;
-    margin-top: 25%;
-    margin-bottom: 5%;
+
+    &:hover {
+        background: lighten($color: $green, $amount: 15);
+        color: lighten($color: rgba(212, 247, 204, 0.61), $amount: 15);;
+    }
 }
