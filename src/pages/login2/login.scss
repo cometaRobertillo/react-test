@@ -1,68 +1,72 @@
 .contenedor {
     border: 1px solid black;
     width: 90%;
-    min-height: 90vh;
-    display: flex;
-}
-
-.contenedor__info {
-    width: 30%;
-    height: auto;
-    border: 1px solid black;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 90vh;
 
-    .info__layout{
+    .contenedor__info {
+        border: 1px solid black;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background: $green;
+        
+        .info__layout{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid blue;
+            font-size: 10px;
+    
+            .elemento {
+                width: 30%;
+                padding: 5%;
+                border: 1px solid red;
+                text-align: center;
+            }
+    
+        }
+    }
+    
+    .contenedor__form {
+        border: 1px solid black;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        height: 60%;
-        border: 1px solid blue;
-        width: 80%;
-        text-align: center;
+        justify-content: center;
+        height: 70vh;
+    
+        .form__center{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid lightcoral;
+    
+            .form__titulo{
+                border: 1px solid blue;
+                font-size: 15px;
+                text-align: center;
+                font-weight: bold;
+                padding: 5%;
+            }
+        
+            .form__layout{
+                margin-top: 5%;
+                width: 80%;
+                height: 60%;
+            }
+        }
+    
         
     }
 }
 
-.contenedor__form {
-    width: 70%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    .form__center{
-        height: 90%;
-        width: 80%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-        border: 1px solid lightcoral;
-
-        .form__titulo{
-            border: 1px solid blue;
-            font-size: 25px;
-        }
-    
-        .form__layout{
-            margin-top: 5%;
-            width: 80%;
-            height: 60%;
-        }
-    }
-
-    
-}
 
 .centro {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;

@@ -2,20 +2,24 @@ import { Button, Input } from 'antd'
 import Form from 'antd/lib/form/Form'
 import FormItem from 'antd/lib/form/FormItem'
 import React from 'react'
-import { loginRequest } from '../../helpers/httpRequest'
+import { customRequest, customRequestPromise, sampleResquest } from '../../helpers/httpRequest'
 import { User } from '../../models/user'
 
 export const LoginForm = () => {
 
-    const onFinish = (values : any) => {
+    const onFinish = async (values: User) => {
         console.table(values);
+
+        const result = await customRequestPromise('post', '/login', {
+            ...values
+        });
+        console.log('result',result);
+
+
+        const sample = await sampleResquest('post','/login', {...values});
+        console.log('sample',sample);
         
-        loginRequest(
-            {
-                ...values,
-                password: parseInt(values.password)
-            }
-        );
+
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -35,7 +39,7 @@ export const LoginForm = () => {
                 name="email"
                 rules={[{ required: true, message: 'Please input your email!' }]}
             >
-                <Input 
+                <Input
                     placeholder="Email"
                     className="form__input"
                     size="large"
@@ -55,8 +59,9 @@ export const LoginForm = () => {
                 />
             </FormItem>
 
-            <FormItem wrapperCol={{ offset: 4, span: 16 }}>
-                <Button 
+            <FormItem wrapperCol={{ span: 16 }}>
+
+                <Button
                     type="primary"
                     htmlType="submit"
                     size={"large"}

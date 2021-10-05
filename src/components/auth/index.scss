@@ -6,6 +6,7 @@
 .btn {
     background: $green;
     color: black;
+    margin-top: 10%;
 
     &:hover {
         background: lighten($color: $green, $amount: 15);
