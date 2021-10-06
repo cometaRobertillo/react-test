@@ -14,7 +14,6 @@
         
         .info__layout{
             display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             border: 1px solid blue;
@@ -22,6 +21,8 @@
 
             .icon{
                 font-size: 20px;
+                margin-left: 5%;
+                margin-right: 5%;
             }
     
             .elemento {
@@ -42,9 +43,11 @@
     
         .form__center{
             width: 100%;
+            height: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             border: 1px solid lightcoral;
     
             .form__titulo{
@@ -71,4 +74,65 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.description{
+    display: none;
+}
+
+.icon-hide{
+    display: block;
+}
+
+
+//medias
+
+@media (min-width: 500px) {
+
+    .contenedor{
+        flex-direction: row;
+
+        .contenedor__form{
+            width: 70%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            .form__center{
+                width: 90%;
+                height: 70%;
+            }
+        }
+    
+    }
+
+    .contenedor__info{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .info__layout{
+            flex-direction: column;
+            justify-content: center;
+            height: 40%;
+
+            .elemento{
+                margin-top: 5%;
+                margin-bottom: 5%;
+ 
+            }
+
+            .description{
+                display: block;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    .icon-hide{
+        display: none;
+    }
 }

@@ -3,6 +3,14 @@ import React from 'react'
 import { LoginForm } from '../../components/auth/loginForm'
 
 export const Login2 = () => {
+
+
+   
+    
+    
+
+    
+
     return (
         <div className="centro">
             <div className="contenedor">
@@ -10,7 +18,8 @@ export const Login2 = () => {
                     <div className="info__layout">
                         <SwapOutlined className="icon elemento"/>
                         <h2 className="elemento title">Reporting</h2>
-                        <SwapOutlined className="icon elemento"/>
+                        <SwapOutlined className="icon elemento icon-hide"/>
+                        <p className="elemento description">this is de app description</p>
                     </div>
                 </div>
 
